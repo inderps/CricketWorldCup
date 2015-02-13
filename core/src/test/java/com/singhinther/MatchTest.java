@@ -16,11 +16,12 @@ public class MatchTest {
       Stadium stadium = new Stadium("stadium");
       Date date = new Date();
 
-      Match match = new Match(team1, team2, stadium, date);
+      Match match = new Match(team1, team2, stadium, date, MatchType.POOL_A);
 
       assertThat(match.getTeam1(), is(team1));
       assertThat(match.getTeam2(), is(team2));
       assertThat(match.getStadium(), is(stadium));
       assertThat(match.getDate(), is(date));
+      assertThat(match.getType(), is(MatchType.POOL_A));
   }
 }
