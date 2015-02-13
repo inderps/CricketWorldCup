@@ -17,9 +17,10 @@ public class MainActivity extends ActionBarActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    worldCup = new WorldCup();
+    worldCup = WorldCupData.setup();
     createListOfMatches(worldCup.getAllMatches());
   }
+
 
   private void createListOfMatches(List<Match> matches) {
     ListView listView = (ListView) findViewById(R.id.list);
