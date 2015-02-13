@@ -1,12 +1,15 @@
 package com.singhinther;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class WorldCup {
+  private List<Match> matches;
+
+  public WorldCup(List<Match> matches) {
+    this.matches = matches;
+  }
+
   public List<Match> getAllMatches() {
-    List mat = new ArrayList<Match>();
-    mat.add(new Match());
-    return mat;
+    return matches;
   }
 }
