@@ -14,7 +14,7 @@ import java.util.List;
 public class WorldCupData {
 
   public static WorldCup setup(){
-    List<Match> matches = new ArrayList<>();
+    List<Match> matches = new ArrayList<Match>();
 
     Stadium hagley = new Stadium("Hagley Oval, Christchurch");
     Stadium mcg = new Stadium("Melbourne Cricket Ground, Melbourne");

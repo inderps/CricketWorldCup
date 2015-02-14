@@ -20,7 +20,7 @@ public class WorldCupTest {
     Match expectedMatch2 = stubMatch("07-01-2015");
     Match expectedMatch3 = stubMatch("08-01-2015");
 
-    List<Match> expectedMatches = new ArrayList<>();
+    List<Match> expectedMatches = new ArrayList<Match>();
     expectedMatches.add(expectedMatch1);
     expectedMatches.add(expectedMatch2);
     expectedMatches.add(expectedMatch3);
@@ -41,7 +41,7 @@ public class WorldCupTest {
     Match match2 = new Match(new Team("West Indies"), new Team("England"), mock(Stadium.class), now, MatchType.POOL_A);
     Match match3 = new Match(new Team("West Indies"), new Team("Australia"), mock(Stadium.class), now, MatchType.POOL_A);
 
-    List<Match> matches = new ArrayList<>();
+    List<Match> matches = new ArrayList<Match>();
     matches.add(match1);
     matches.add(match2);
     matches.add(match3);
@@ -63,7 +63,7 @@ public class WorldCupTest {
     Match match2 = new Match(mock(Team.class), mock(Team.class), new Stadium("B"), now, MatchType.SEMI_FINAL);
     Match match3 = new Match(mock(Team.class), mock(Team.class), new Stadium("A"), now, MatchType.SEMI_FINAL);
 
-    List<Match> matches = new ArrayList<>();
+    List<Match> matches = new ArrayList<Match>();
     matches.add(match1);
     matches.add(match2);
     matches.add(match3);
@@ -84,7 +84,7 @@ public class WorldCupTest {
     Match match2 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), now, MatchType.FINAL);
     Match match3 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), now, MatchType.SEMI_FINAL);
 
-    List<Match> matches = new ArrayList<>();
+    List<Match> matches = new ArrayList<Match>();
     matches.add(match1);
     matches.add(match2);
     matches.add(match3);
@@ -106,7 +106,7 @@ public class WorldCupTest {
     Match match2 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), DateUtil.convertToDate("08-01-2015"), MatchType.SEMI_FINAL);
     Match match3 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), DateUtil.convertToDate("12-01-2015"), MatchType.SEMI_FINAL);
 
-    List<Match> matches = new ArrayList<>();
+    List<Match> matches = new ArrayList<Match>();
     matches.add(match1);
     matches.add(match2);
     matches.add(match3);

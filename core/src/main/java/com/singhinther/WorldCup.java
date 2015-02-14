@@ -18,7 +18,7 @@ public class WorldCup {
   }
 
   public List<Match> getAllMatchesByTeam(Team team) {
-    List<Match> filteredMatches = new ArrayList<>();
+    List<Match> filteredMatches = new ArrayList<Match>();
     for(Match match: matches){
       if(match.getTeam1().equals(team) || match.getTeam2().equals(team)){
         filteredMatches.add(match);
@@ -28,7 +28,7 @@ public class WorldCup {
   }
 
   public List<Match> getAllMatchesByStadium(Stadium stadium) {
-    List<Match> filteredMatches = new ArrayList<>();
+    List<Match> filteredMatches = new ArrayList<Match>();
     for(Match match: matches){
       if(match.getStadium().equals(stadium)){
         filteredMatches.add(match);
@@ -38,7 +38,7 @@ public class WorldCup {
   }
 
   public List<Match> getAllMatchesByMatchType(MatchType matchType) {
-    List<Match> filteredMatches = new ArrayList<>();
+    List<Match> filteredMatches = new ArrayList<Match>();
     for(Match match: matches){
       if(match.getType().equals(matchType)){
         filteredMatches.add(match);
@@ -48,7 +48,7 @@ public class WorldCup {
   }
 
   public List<Match> getAllMatchesByDate(Date date) {
-    List<Match> filteredMatches = new ArrayList<>();
+    List<Match> filteredMatches = new ArrayList<Match>();
     for(Match match: matches){
       if(match.getDate().equals(date)){
         filteredMatches.add(match);
