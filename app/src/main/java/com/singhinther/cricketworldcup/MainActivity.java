@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity {
       public void onClick(View v) {
         MatchesListAdapter adapter = new MatchesListAdapter(activity, worldCup);
         listView.setAdapter(adapter);
-        setTitle(R.string.all);
+        setTitle(activity.getString(R.string.all));
       }
     });
   }
