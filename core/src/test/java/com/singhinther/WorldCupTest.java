@@ -11,15 +11,14 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 
 public class WorldCupTest {
-  long ONE_DAY_MILLIS = 86400 * 1000;
   Date now = new Date();
 
   @Test
   public void shouldReturnAllMatchesOrderByDate()
   {
-    Match expectedMatch1 = stubMatch(now.getTime() + (3 * ONE_DAY_MILLIS));
-    Match expectedMatch2 = stubMatch(now.getTime() + (1 * ONE_DAY_MILLIS));
-    Match expectedMatch3 = stubMatch(now.getTime() + (2 * ONE_DAY_MILLIS));
+    Match expectedMatch1 = stubMatch("12-01-2015");
+    Match expectedMatch2 = stubMatch("07-01-2015");
+    Match expectedMatch3 = stubMatch("08-01-2015");
 
     List<Match> expectedMatches = new ArrayList<>();
     expectedMatches.add(expectedMatch1);
@@ -103,11 +102,9 @@ public class WorldCupTest {
   @Test
   public void shouldReturnAllMatchesBySameDate()
   {
-    Date sameDate = new Date(now.getTime() + (2 * ONE_DAY_MILLIS));
-
-    Match match1 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), sameDate, MatchType.SEMI_FINAL);
-    Match match2 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), now, MatchType.SEMI_FINAL);
-    Match match3 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), sameDate, MatchType.SEMI_FINAL);
+    Match match1 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), DateUtil.convertToDate("12-01-2015"), MatchType.SEMI_FINAL);
+    Match match2 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), DateUtil.convertToDate("08-01-2015"), MatchType.SEMI_FINAL);
+    Match match3 = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), DateUtil.convertToDate("12-01-2015"), MatchType.SEMI_FINAL);
 
     List<Match> matches = new ArrayList<>();
     matches.add(match1);
@@ -116,15 +113,15 @@ public class WorldCupTest {
 
     WorldCup worldCup = new WorldCup(matches);
 
-    List<Match> actualMatches = worldCup.getAllMatchesByDate(sameDate);
+    List<Match> actualMatches = worldCup.getAllMatchesByDate(DateUtil.convertToDate("12-01-2015"));
 
     assertThat(actualMatches.size(), is(2));
     assertThat(actualMatches.get(0), is(match1));
     assertThat(actualMatches.get(1), is(match3));
   }
 
-  private Match stubMatch(long date){
-    Match match = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), new Date(date), MatchType.FINAL);
+  private Match stubMatch(String date){
+    Match match = new Match(mock(Team.class), mock(Team.class), mock(Stadium.class), DateUtil.convertToDate(date), MatchType.FINAL);
     return match;
   }
 }

@@ -3,6 +3,7 @@ package com.singhinther.cricketworldcup;
 import android.content.Context;
 import android.widget.TextView;
 
+import com.singhinther.DateUtil;
 import com.singhinther.Stadium;
 
 import java.text.DateFormat;
@@ -17,10 +18,10 @@ public class DateTextView extends TextView {
 
   public void setText(Date date){
     this.date = date;
-    setText(DateFormat.fo);
+    setText(DateUtil.formattedDate(date));
   }
 
-  public Stadium getStadium() {
-    return stadium;
+  public Date getDate() {
+    return date;
   }
 }

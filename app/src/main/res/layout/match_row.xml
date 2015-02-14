@@ -12,7 +12,7 @@
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
       android:textColor="@color/black"
-      android:textSize="18dip"
+      android:textSize="20dip"
       android:textStyle="bold"
       android:id="@+id/team1"
       android:gravity="center_vertical"
@@ -21,7 +21,7 @@
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
       android:textColor="@color/black"
-      android:textSize="18dip"
+      android:textSize="20dip"
       android:layout_marginLeft="15dip"
       android:layout_marginRight="15dip"
       android:textStyle="bold"
@@ -31,12 +31,36 @@
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
       android:textColor="@color/black"
-      android:textSize="18dip"
+      android:textSize="20dip"
       android:textStyle="bold"
       android:id="@+id/team2"
       android:gravity="center_vertical"
       android:text="Australia"/>
     </LinearLayout>
-
-
+    <com.singhinther.cricketworldcup.DateTextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="16dip"
+      android:textColor="@color/blue"
+      android:text="Feb 15, 2015"/>
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dip"
+      android:orientation="horizontal">
+      <com.singhinther.cricketworldcup.MatchTypeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pool A"/>
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dip"
+        android:layout_marginRight="5dip"
+        android:text=","/>
+      <com.singhinther.cricketworldcup.StadiumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Melbourne Cricket Ground, Melbourne"/>
+      </LinearLayout>
 </LinearLayout>
