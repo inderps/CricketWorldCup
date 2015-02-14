@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:paddingLeft="10dip"
-              android:layout_height="match_parent">
+              android:padding="10dip"
+              android:layout_height="wrap_content">
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="40dip"
     android:orientation="horizontal">
-    <com.singhinther.cricketworldcup.TeamTextView
+    <TextView
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
       android:textColor="@color/black"
@@ -27,7 +27,7 @@
       android:textStyle="bold"
       android:gravity="center_vertical"
       android:text="vs"/>
-    <com.singhinther.cricketworldcup.TeamTextView
+    <TextView
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
       android:textColor="@color/black"
@@ -37,10 +37,11 @@
       android:gravity="center_vertical"
       android:text="Australia"/>
     </LinearLayout>
-    <com.singhinther.cricketworldcup.DateTextView
+    <TextView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:textSize="16dip"
+      android:id="@+id/date"
       android:textColor="@color/blue"
       android:text="Feb 15, 2015"/>
     <LinearLayout
@@ -48,9 +49,10 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="8dip"
       android:orientation="horizontal">
-      <com.singhinther.cricketworldcup.MatchTypeTextView
+      <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/match_type"
         android:text="Pool A"/>
       <TextView
         android:layout_width="wrap_content"
@@ -58,9 +60,10 @@
         android:layout_marginLeft="2dip"
         android:layout_marginRight="5dip"
         android:text=","/>
-      <com.singhinther.cricketworldcup.StadiumTextView
+      <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/stadium"
         android:text="Melbourne Cricket Ground, Melbourne"/>
       </LinearLayout>
 </LinearLayout>
